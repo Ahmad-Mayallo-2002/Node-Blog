@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.loading {
+  border-top-color: transparent !important;
+}
+
+// Extra Small
+@media (max-width: 575px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+// Small
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+// Medium
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+// Large
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+// X-Large
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+// XX-Large
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+.btn-primary-outline {
+  color: #007bff; /* Bootstrap primary color */
+  background-color: transparent;
+  border: 1px solid #007bff;
+  transition: 250ms;
+}
+
+.btn-primary-outline:hover {
+  color: #ffffff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-success-outline {
+  color: #28a745; /* Bootstrap success color */
+  background-color: transparent;
+  border: 1px solid #28a745;
+  transition: 250ms;
+}
+
+.btn-success-outline:hover {
+  color: #ffffff;
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.btn-error-outline {
+  color: #dc3545; /* Bootstrap danger color */
+  background-color: transparent;
+  border: 1px solid #dc3545;
+}
+
+.btn-error-outline:hover {
+  color: #ffffff;
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+img[alt="Tailwind CSS"],
+img[alt="Next.js"],
+img[alt="Express.js"] {
+  border-radius: 50%;
+}
+img[alt="TypeScript"] {
+  border-radius: 15px;
+}
+img[alt="Hoo Bank"],
+img[alt="High King"] {
+  object-fit: contain;
+}
+
+#projectForm {
+  input {
+    outline: none;
+    border: 2px solid;
+    padding: 15px;
+    background-color: transparent;
+    width: 100%;
+  }
+}
+
+#contact-form {
+  display: grid;
+  gap: 1rem;
+  div {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    input {
+      grid-column: span 2;
+      width: 100%;
+    }
+  }
+  @media (max-width: 767px) {
+    div input {
+      grid-column: 1 / -1;
+    }
+  }
+  input,
+  textarea {
+    outline: none;
+    background-color: transparent;
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+  }
+  textarea {
+    resize: none;
+  }
+}
+
+#about-list li {
+  display: flex;
+  gap: 0.5rem;
+  counter-increment: asd;
+  &::before {
+    content: counter(asd);
+    display: block;
+  }
+}
